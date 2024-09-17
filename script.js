@@ -67,7 +67,7 @@ const formDataModified={
     console.log('Form Data:', formDataModified); // For debugging
 
     // Make an API call for signup (replace with your actual backend API endpoint)
-    fetch('https://backend-server-4tmo.onrender.com/signup/', {
+    fetch('https://backend-server-ohpm.onrender.com/signup/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -101,7 +101,7 @@ async function login(event) {
     console.log('Login Data:', loginData);
 
     // Make an API call to the FastAPI login endpoint
-    await fetch('https://backend-server-4tmo.onrender.com/login/', {
+    await fetch('https://backend-server-ohpm.onrender.com/login/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
