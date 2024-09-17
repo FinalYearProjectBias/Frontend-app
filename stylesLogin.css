@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://birlainstitute.co.in/Pictures/img-1.webp'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Main login container */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Slight transparency for a clean look */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+/* Title for the login page */
+.login-container h2 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Login button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Forgot password link */
+.forgot-password {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Sign-up option */
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #28a745;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 22px;
+    }
+
+    .form-group input {
+        padding: 10px;
+    }
+
+    .login-btn {
+        padding: 10px;
+    }
+}

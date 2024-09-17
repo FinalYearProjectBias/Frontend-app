@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Teaching Staff Login page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .menu button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .menu button:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="menu">
+        <button onclick="showSection('edit-profile')">Edit Profile</button>
+        <button onclick="showSection('change-password')">Change Password</button>
+        <button onclick="showSection('post-grievance')">Post Grievance</button>
+        <button onclick="showSection('my-grievance')">My Grievance</button>
+    </div>
+
+    <!-- Edit Profile Section -->
+    <div id="edit-profile" class="content">
+        <h2>Edit Profile</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-number">Contact Number:</label>
+                <input type="tel" id="contact-number" name="contact-number" placeholder="Enter your contact number" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Change Password Section -->
+    <div id="change-password" class="content">
+        <h2>Change Password</h2>
+        <form>
+            <div class="form-group">
+                <label for="current-password">Current Password:</label>
+                <input type="password" id="current-password" name="current-password" placeholder="Enter your current password" required>
+            </div>
+            <div class="form-group">
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password" placeholder="Enter your new password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm New Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your new password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Change Password</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Post Grievance Section -->
+    <div id="post-grievance" class="content">
+        <h2>Post Grievance</h2>
+        <form>
+            <div class="form-group">
+                <label for="grievance-title">Title:</label>
+                <input type="text" id="grievance-title" name="grievance-title" placeholder="Enter grievance title" required>
+            </div>
+            <div class="form-group">
+                <label for="grievance-description">Description:</label>
+                <textarea id="grievance-description" name="grievance-description" rows="4" placeholder="Enter grievance description" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Grievance</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- My Grievance Section -->
+    <div id="my-grievance" class="content">
+        <h2>My Grievance</h2>
+        <p>Here you can view your submitted grievances.</p>
+        <!-- Add content for viewing grievances here -->
+    </div>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('.content').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
